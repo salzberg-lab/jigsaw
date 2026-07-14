@@ -1,0 +1,50 @@
+LOCAL_POS = ../lib
+#include "../lib/app.config"
+
+XCOMM Program for overlap module
+PROG1=jigsaw
+XCOMM Build both automatically
+PROGLIST=$(PROG1)
+
+Annotation.o : RegionPrediction.hpp
+AnnotationMatrix.o : RegionPrediction.hpp
+
+LOCAL_LDFLAGS = 
+CXXOPTIONS=-D__USE_ISOC9X -H -v
+CXXOPTIONS=
+BBLIBLOC=./$(BBLIB)
+AALIBLOC=$(LOCAL_POS)/src/$(AALIB)
+OBJS = InputData.o PrintVec.o Custom7.o LinComb.o LinComb2.o
+LIBOBJ = \
+CustomScore.o TerminalExon.o ScoreInterval.o \
+MatrixIdx.o MatrixItemContents.o InternalExon.o \
+IntronInterval.o IgrInterval.o TransProb.o InitialExon.o SingleExon.o AnsCheck.o \
+RegionPrediction.o EvScores.o TraceBack.o Main.o \
+AnnotationMatrix.o AnnotationItem.o Annotation.o Combine.o
+
+XCOMM I want to keep these around to see if I can figure out a way to combine
+XCOMM both my nonoverlapping scoring method with an overlaping interval scoring method
+XCOMM CustomInterval.o RecordInterval.o PrintInterval.o
+
+#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
+
+MODULE_DIRS=../lib/src
+SUBDIRS=$(MODULE_DIRS)
+
+MakefileSubdirs($(SUBDIRS))
+MakeSubdirs($(SUBDIRS))
+CleanSubdirs($(SUBDIRS))
+InstallSubdirs($(SUBDIRS))
+
+DEPLIST = $(BBLIBLOC)
+AllTarget( $(BBLIBLOC) $(PROGLIST))
+
+LD_FLAGS=
+SYSLIBS = -lm
+LOCAL_LIBDIR=./lib
+NormalLibraryTarget($(BB),$(LIBOBJ))
+NormalCplusplusProgramTarget($(PROG1), comb1.o $(OBJS), $(DEPLIST) $(BBLIBLOC) $(AALIBLOC),, $(BBLIBLOC) $(AALIBLOC) $(SYSLIBS) $(CXXLIBS))
+InstallProgram($(PROG1),../../bin/$(HOSTTYPE))
+CleanTarget()
+cl:
+	rm -f *.o $(PROG1) *.a

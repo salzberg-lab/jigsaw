@@ -1,0 +1,18 @@
+# Intron Length Penalty
+-1 10
+# Intergenic Length Penalty
+0 0
+# Internal Exon Length Penalty
+0 0
+# Minimum Intron Length
+10
+# Minimum Intergenic Length
+20
+# Alignment Connection Cutoff
+-1
+# Donor Consensus Sequence
+gt gc
+# Acceptor Consensus Sequence
+ag
+# Maximum Sequence Length / Overlap Length
+2000000 20000

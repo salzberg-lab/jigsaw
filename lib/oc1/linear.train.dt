@@ -1,0 +1,6 @@
+Training set: linear.train, Dimensions: 2, Categories: 2
+
+
+Root Hyperplane: Left = [33,0], Right = [0,39]
+2.157342 x[1] + -2.064201 x[2] + -0.070845 = 0
+

@@ -1,0 +1,7 @@
+../42492/42492.curation.cd default curation
+../42492/42492.glimmerA.gp default geneprediction acc don coding start stop intron
+../42492/42492.genemarkHMM.gp default geneprediction acc don coding start stop intron
+../42492/42492.score.genscan+.gp default geneprediction acc don coding start stop intron
+../42492/42492.gap2.ph default homology acc don coding start stop
+../42492/42492.nraa.ph default homology acc don coding start stop
+../42492/42492.score.genesplicer.sp default spliceprediction acc don

@@ -1,0 +1,81 @@
+2.1.1 
+-----------------------------------------------------------
+Initial Public Release
+
+2.1.2 
+-----------------------------------------------------------
+Includes additional parsing modules to read different formats.
+Check the README file to see what formats are supported.
+
+2.1.2a  
+-----------------------------------------------------------
+Bug fixed in training procedure.  Coding vectors on the opposite
+strand of the true gene were being mislabeled as coding.
+
+2.1.3 
+-----------------------------------------------------------
+Allows the use of partial gene models in the input for training
+
+2.1.4 
+-----------------------------------------------------------
+Intron Penalty length, fixed Gff reading error
+
+2.1.5  
+-----------------------------------------------------------
+Compiles on both GCC 3.2.2 (still with deprecated flags) and 2.95 
+more OS and compile platforms to come
+Read the "snap" gene prediction file format
+
+3.1.1 
+-----------------------------------------------------------
+Base line for a new release version, which allows for new 
+variable length sequence interval parameters.  This version
+includes no new parameters, and should have identical output
+to version 2.1.5, however, due to algorithmic changes the
+program will run slower.  The drop in runtime speed will
+hopefully be made up for with more accurate predictions
+in future versions.
+
+Note this version is not expected to be released, since
+there is no difference in output and 
+additional code changes needed to streamline
+the code.
+
+3.1.1a 
+-----------------------------------------------------------
+Cosmetic code changes mainly, however, a few minor bug
+fixes detected over 3.1.1 - This version is being
+tested on the 515 Arabidopsis BACs to ensure identical
+output with 2.1.5, so far it appears that there
+were a few bugs in 2.1.5 that the new algorithm fixes
+
+3.1.3
+-----------------------------------------------------------
+Can use an intron prediction model (as an option)
+and shows an improvement over the published results.
+
+3.2.0
+-----------------------------------------------------------
+Intron prediction model fully tested. Now we assume that 
+Intron data is explicitly defined in sequence alignment data
+by requiring that multiple exons created from a single source
+cDNA are identified in the input file. This version is tested
+on Human and Rice.
+3.2.2
+-----------------------------------------------------------
+Bug fix, sequence alignment data was not properly sorted
+by coordinates - it assumed the data was already sorted.
+
+3.2.6
+--------------------------------------------------------
+Linear combiner option added.
+
+3.2.9
+--------------------------------------------------------
+Updated to compile with gcc v4.2
+Minor modifications to the tutorial
+
+3.2.10
+--------------------------------------------------------
+Updated to compile with gcc v4.3
+

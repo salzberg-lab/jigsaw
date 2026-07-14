@@ -1,0 +1,44 @@
+This software is OSI Certified Open Source Software.
+OSI Certified is a certification mark of the Open Source Initiative.
+
+--------------------------------------------
+SUPPORTED PLATFORMS
+--------------------------------------------
+Successfully compiled using the following versions of gcc:
+OS; gcc version
+Linux 2.6, 2.4, 2.2 - GCC  2.96 and 2.95, 3.2
+SunOS 5.8; 2.95
+
+--------------------------------------------
+INSTALLATION
+--------------------------------------------
+To build JIGSAW 
+cd into the 'src/main' 
+xmkmf -a
+make install
+
+This will place the application binary (jigsaw) in the
+bin/$(HOSTYPE) directory where $(HOSTTYPE) should already be defined
+on your system to refer to your os (e.g. Linux, SunOS, etc..)  
+if HOSTTYPE is not defined, the binary will be placed directly in the bin/ directory.
+
+To build the oc1 decision tree software, cd into 'lib/oc1' and follow the instructions in the README (or just type 'make')
+this should compile the "mktree" binary, place this binary file somewhere in your path.
+
+Distribution directory structure:
+
+-------------------------------
+src/ - JIGSAW C++ source code
+-------------------------------
+src/lib - Internal Development library
+src/main - JIGSAW application directory
+
+-------------------------------
+bin/ - wrapper perl scripts used to run and train JIGSAW here
+-------------------------------
+bin/$HOSTTYPE - JIGSAW C++ binary placed here
+
+-------------------------------
+lib/ - used library components, which are developed independantly of JIGSAW
+-------------------------------
+lib/oc1 - source code for oc1 decision tree software, included for convenience

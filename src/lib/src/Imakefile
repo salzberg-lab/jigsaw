@@ -1,0 +1,37 @@
+LOCAL_POS = ..
+#include "../app.config"
+
+XCOMM Program for overlap module
+XCOMM Build both automatically
+
+Annotation.o : ModelOrder.hpp
+AnnotationItem.o : ModelOrder.hpp
+
+OBJ1 = \
+	GtfFactory.o Gff3Factory.o GffFeature.o HomGeneEvidence.o BtabFactoryIntron.o ParamFile.o SnapFactory.o \
+	EvidenceTypeRegistry.o SpliceSiteEvidence.o TypeManage.o GenscanFactory.o \
+	GenemarkHmmFactory.o SpliceSiteDataSetConcreteFactory.o FgeneshFactory.o BtabFactory.o \
+	GenePredEvidence.o GenePredDataSetConcreteFactory.o GlimmerMFactory.o PhatFactory.o GffFactory.o \
+ 	FeatVec.o wtree.o util.o tree_util_prob.o mclassify.o dtree.o Compare.o Options.o ExonDistr.o \
+	DataDescrip.o FormatRegistry.o parse_help.o DnaStr.o GenePredEvidence.o HomologyEvidenceBndry.o \
+	dsu.o MatchPrediction.o AnnotationScore.o genemodels.o PlaceHolder.o \
+   HomologyDataSet.o HomologyDataSetConcreteFactory.o GenePrediction.o GenePredDataSet.o \
+   SpliceSite.o SpliceSiteDataSet.o Intron.o Igr.o Initial.o Internal.o Terminal.o Single.o \
+	DataSetAbstractProduct.o Prediction.o SeqLoc.o
+
+OBJ2 = StatData.o AnnotationStat.o CurationConcreteFactory.o InputDataStats.o
+
+
+DEPLIST = 
+LOCAL_LDFLAGS =
+LOCALCFLAGS = 
+
+
+AllTarget($(AALIB))
+
+SYSLIBS = 
+LOCAL_LIBDIR=./lib
+
+NormalLibraryTarget($(AA),$(OBJ1))
+InstallLibrary($(AA),../$(OSTYPE))
+CleanTarget()

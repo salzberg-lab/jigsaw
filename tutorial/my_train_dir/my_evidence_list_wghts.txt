@@ -1,0 +1,6 @@
+glimmerA.gp default geneprediction acc 1.0 don 1.0 coding 1.0 start 1.0 stop 1.0 intron 1.0
+genemarkHMM.gp default geneprediction acc 1.0 don 1.0 coding 1.0 start 1.0 stop 1.0 intron 1.0
+score.genscan+.gp default geneprediction acc 1.0 don 1.0 coding 1.0 start 1.0 stop 1.0 intron 1.0
+gap2.ph default homology acc 1.0 don 1.0 coding 1.0 intron 1.0
+nraa.ph default homology acc 1.0 don 1.0 coding 1.0 intron 1.0
+score.genesplicer.sp default spliceprediction acc 0.5 don 0.5

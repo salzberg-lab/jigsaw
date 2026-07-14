@@ -1,0 +1,10 @@
+# Intron Length Penalty
+2000 10
+# Intergenic Length Penalty
+200 10
+# Minimum Intron Length
+8
+# Minimum Intergenic Length
+8
+# Alignment Connection Cutoff
+2000

@@ -1,0 +1,6 @@
+60001/60001.glimmerA.gp default geneprediction acc don coding start stop intron
+60001/60001.genemarkHMM.gp default geneprediction acc don coding start stop intron
+60001/60001.score.genscan+.gp default geneprediction acc don coding start stop intron
+60001/60001.gap2.ph default homology acc don coding start stop
+60001/60001.nraa.ph default homology acc don coding start stop
+60001/60001.score.genesplicer.sp default spliceprediction acc don

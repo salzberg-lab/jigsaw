@@ -1,0 +1,7 @@
+curation.cd default curation
+glimmerA.gp default geneprediction acc don coding start stop intron
+genemarkHMM.gp default geneprediction acc don coding start stop intron
+score.genscan+.gp default geneprediction acc don coding start stop intron
+gap2.ph default homology acc don coding start stop intron
+nraa.ph default homology acc don coding start stop intron
+score.genesplicer.sp default spliceprediction acc don

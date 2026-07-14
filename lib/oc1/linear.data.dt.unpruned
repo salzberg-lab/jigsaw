@@ -1,0 +1,24 @@
+Training set: linear.data, Dimensions: 2, Categories: 2
+
+
+Root Hyperplane: Left = [40,6], Right = [6,38]
+1.000000 x[1] + -0.470928 = 0
+
+l Hyperplane: Left = [2,6], Right = [38,0]
+1.000000 x[2] + -0.282076 = 0
+
+ll Hyperplane: Left = [2,1], Right = [0,5]
+1.000000 x[1] + -0.250708 = 0
+
+r Hyperplane: Left = [1,37], Right = [5,1]
+1.000000 x[2] + -0.724560 = 0
+
+rl Hyperplane: Left = [1,4], Right = [0,33]
+1.000000 x[1] + -0.602235 = 0
+
+rll Hyperplane: Left = [0,4], Right = [1,0]
+1.000000 x[1] + -0.596405 = 0
+
+rr Hyperplane: Left = [5,0], Right = [0,1]
+1.000000 x[1] + -0.884354 = 0
+
