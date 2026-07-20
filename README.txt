@@ -1,14 +1,6 @@
 JIGSAW README
 
-
-
-
 Table of Contents
-
-
-
-
-
 
   Preamble
 
