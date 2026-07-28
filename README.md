@@ -1,19 +1,11 @@
-JIGSAW README
-
-Table of Contents
-
-  Preamble
+# JIGSAW README
 
 This software is OSI Certified Open Source Software.
 
 OSI Certified is a certification mark of the Open Source 
 Initiative.
 
-  --------------------------------------------------------
-
-  Introduction
-
-  --------------------------------------------------------
+## Introduction
 
 JIGSAW is a software program designed to construct gene models 
 from multiple sources of prediction evidence. It can take as 
@@ -23,11 +15,7 @@ sequence. The standard JIGSAW program is called "jigsaw" and is
 designed to operated on a single user supplied fasta formatted 
 genomic sequence.
 
-  --------------------------------------------------------
-
-  Getting Started
-
-  --------------------------------------------------------
+## Getting Started
 
 In order to get JIGSAW up and running you first have to decide 
 what gene structure evidence to collect from your annotation 
@@ -63,24 +51,20 @@ than ab initio gene prediction sources.
 The next section describes running JIGSAW's linear combiner 
 option.
 
-  --------------------------------------------------------
-
-  RUNNING JIGSAW
-
-  --------------------------------------------------------
+## RUNNING JIGSAW
 
 The script, "run_jigsaw.pl" is designed to run JIGSAW on multiple 
 sequence contigs using a template evidence list file. It is 
 assumed that there is a separate directory for each sequence 
 contig and the gene prediction evidence associated with the 
-contig, is located in that directory. ``run_jigsaw.pl'' run the ``
-jigsaw'' binary for each individual directory containing data.
+contig, is located in that directory. ``run_jigsaw.pl'' run the ``jigsaw'' binary for each individual directory containing data.
 
 The basic command line options for running JIGSAW (after 
 training) are:
 
-jigsaw -f "fasta seq file" -d "training directory" -m "gene 
-output file" -e "evidence list file"
+```bash
+jigsaw -f "fasta seq file" -d "training directory" -m "gene output file" -e "evidence list file"
+```
 
 -f: Genomic sequence in fasta format associated with evidence
 
@@ -143,10 +127,11 @@ training and running.
 
 The typical usage of the script is:
 
-run_jigsaw.pl -l directory_file_list -e evidence_template_list -o 
-output_filename -d training_directory
+```bash
+run_jigsaw.pl -l directory_file_list -e evidence_template_list -o output_filename -d training_directory
+```
 
-  Running the linear combiner option
+Running the linear combiner option
 
 The linear combiner option is run nearly identical to the 
 statistical combiner option with minor changes to the evidence 
@@ -154,9 +139,9 @@ list file format and option flags. When using the ``run_jigsaw.pl''
  script, the ``--lin'' option is used and the -d option can be 
 dropped. The jigsaw binary is called as follows: 
 
-jigsaw -l -f "fasta seq file" -m "gene output file" -e "evidence 
-list file"
-
+```bash
+jigsaw -l -f "fasta seq file" -m "gene output file" -e "evidence list file"
+```
 The evidence list file differs in format so that along with the 
 listing of predictions made by each evidence source, is the 
 weight associated with the prediction. Using the example used 
@@ -184,11 +169,7 @@ In addition, there is a tutorial included with this distribution,
 which walks you through an example of training and running 
 JIGSAW.
 
-  --------------------------------------------------------
-
-  Training JIGSAW
-
-  --------------------------------------------------------
+## Training JIGSAW
 
 The perl script "bin/train_jigsaw.pl" provides a template for how 
 to train JIGSAW, and assumes there are multiple directories, each 
@@ -236,11 +217,7 @@ things up use the "-a" option to the "mktree" binary, which uses
 single condition splits for nodes in the tree. When using the 
 "train_jigsaw.pl" script -t turns on the -a option for mktree.
 
-  --------------------------------------------------------
-
-  Feeding Data To JIGSAW
-
-  --------------------------------------------------------
+## Feeding Data To JIGSAW
 
 Input File Formats
 
@@ -331,11 +308,7 @@ multiple locations, it is important to distinguish each match
 uniquely in order for JIGSAW to seperate out the predicted 
 introns.
 
-  --------------------------------------------------------
-
-  Using the Parameter File
-
-  --------------------------------------------------------
+## Using the Parameter File
 
 The first time a jigsaw is run using a training directory, the 
 program first checks to see if the training directory contains a ``
@@ -343,6 +316,7 @@ param.txt'' file, if the file does not exist, it creates one
 using a default set of values. Contents of the default file are 
 shown below.
 
+```bash
 # Intron Length Penalty 
 
 -1 10 
@@ -378,6 +352,7 @@ ag
 # Maximum Sequence Length / Overlap Length
 
 2000000 20000 
+```
 
   The values for a given option are preceded by a comment 
   describing what the option is. 
@@ -412,8 +387,6 @@ ag
   can define what a ``long ``sequence is, and what the overlap 
   size should be. The default is to use 2 million base sequence 
   windows, with each window overlapping by 20,000 bases.
-
---------------------------------------------------------
 
 Send comments, questions or problems to:
 
