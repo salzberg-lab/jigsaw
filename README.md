@@ -388,7 +388,10 @@ ag
   size should be. The default is to use 2 million base sequence 
   windows, with each window overlapping by 20,000 bases.
 
-Send comments, questions or problems to:
+## Additional Documentation
 
-Jonathan - jeallen@umiacs.umd.edu
+See the repository's [Wiki](https://github.com/salzberg-lab/jigsaw/wiki) for additional documentation.
 
+## Publication
+
+PubMed: [https://pubmed.ncbi.nlm.nih.gov/16076884/](JIGSAW: integration of multiple sources of evidence for gene prediction)
